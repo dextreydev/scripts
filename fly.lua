@@ -1,6 +1,6 @@
 local plr = game.Players.LocalPlayer
 local char = plr.Character or plr.CharacterAdded:Wait()
-local torso = char:WaitForChild("Torso")
+local torso = char:WaitForChild("Torso") or char:WaitForChild("Upper Torso")
 local humanoid = char:WaitForChild("Humanoid")
 
 local flyingEnabled = false
