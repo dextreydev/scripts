@@ -832,15 +832,13 @@ end
 
 
 
-local ArkenstoneSection = TCOTab:CreateSection("Arkenstone Holders")
-
-
+--local ArkenstoneSection = TCOTab:CreateSection("Arkenstone Holders")
 local ArkenstoneDropdown = TCOTab:CreateDropdown({
 
 	Name = "Current Holders",
 
-	Options = {" "},
-	CurrentOption = {" "},
+	Options = {},
+	CurrentOption = {"click to show"},
 
 	MultipleOptions = false,
 
