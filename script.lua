@@ -839,8 +839,8 @@ local ArkenstoneDropdown = TCOTab:CreateDropdown({
 
 	Name = "Current Holders",
 
-	Options = {},
-	CurrentOption = {},
+	Options = {" "},
+	CurrentOption = {" "},
 
 	MultipleOptions = false,
 
