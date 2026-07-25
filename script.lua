@@ -1031,6 +1031,7 @@ table.insert(
 updateHolderList()
 
 local OtherScriptsTab = Window:CreateTab("Other Scripts", nil)
+local OtherScriptsSection = OtherScriptsTab:CreateSection("Other Scripts")
 
 OtherScriptsTab:CreateButton({
  Name = "Infinite Yield",
