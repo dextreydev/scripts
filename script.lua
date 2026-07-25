@@ -399,32 +399,6 @@ MainTab:CreateSlider({
  end,
 })
 
-MainTab:CreateButton({
- Name = "Infinite Yield",
- Flag = "InfiniteYield",
-
- Callback = function(_value)
- runRemoteScript(
- "https://raw.githubusercontent.com/EdgeIY/infiniteyield/master/source"
- )
-
- notify("Infinite Yield", "Loaded")
- end,
-})
-
-MainTab:CreateButton({
- Name = "Spy chat",
- Flag = "SpyChat",
-
- Callback = function(_value)
-  notify("Spy Chat", "Loaded")
- runRemoteScript(
- "https://raw.githubusercontent.com/dehoisted/Chat-Spy/refs/heads/main/source/main.lua"
- )
-
- end,
-})
-
 --// The Chosen One
 
 local Players = game:GetService("Players")
@@ -1054,4 +1028,32 @@ table.insert(
 )
 
 
-updateHolderList()q
+updateHolderList()
+
+local OtherScriptsTab = Window:CreateTab("Other Scripts", nil)
+
+OtherScriptsTab:CreateButton({
+ Name = "Infinite Yield",
+ Flag = "InfiniteYield",
+
+ Callback = function(_value)
+ runRemoteScript(
+ "https://raw.githubusercontent.com/EdgeIY/infiniteyield/master/source"
+ )
+
+ notify("Infinite Yield", "Loaded")
+ end,
+})
+
+OtherScriptsTab:CreateButton({
+ Name = "Spy chat",
+ Flag = "SpyChat",
+
+ Callback = function(_value)
+  notify("Spy Chat", "Loaded")
+ runRemoteScript(
+ "https://raw.githubusercontent.com/dehoisted/Chat-Spy/refs/heads/main/source/main.lua"
+ )
+
+ end,
+})
