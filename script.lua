@@ -186,6 +186,8 @@ MainTab:CreateToggle({
     end,
 })
 
+local SPEED = 60
+
 MainTab:CreateToggle({
 	Name = "Fly",
 	CurrentValue = false,
@@ -238,8 +240,6 @@ MainTab:CreateToggle({
 		return function(enabled)
 
 			local player = Players.LocalPlayer
-			local SPEED = 60
-
 
 			if enabled then
 
@@ -370,6 +370,19 @@ MainTab:CreateToggle({
 		end
 
 	end)(),
+})
+
+MainTab:CreateSlider({
+ Name = "Fly Speed",
+ Range = { 16, 500 },
+ Increment = 1,
+ Suffix = "",
+ CurrentValue = 60,
+ Flag = "WalkSpeedSlider",
+
+ Callback = function(value)
+ SPEED = value
+ end,
 })
 
 MainTab:CreateSlider({
@@ -1045,7 +1058,7 @@ OtherScriptsTab:CreateButton({
 })
 
 OtherScriptsTab:CreateButton({
- Name = "Spy chat",
+ Name = "Spy Chat",
  Flag = "SpyChat",
 
  Callback = function(_value)
